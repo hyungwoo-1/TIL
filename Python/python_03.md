@@ -32,6 +32,8 @@
 
 ![](python_04_assets/2022-07-25-16-11-07-image.png)
 
+![2022-07-25-16-11-07-image.png](C:\Users\Yuhyungwoo\SSAFY8\TIL\Python\python_04_assets\2022-07-25-16-11-07-image.png)
+
 <img src="python_04_assets/2022-07-25-16-11-26-image.png" title="" alt="" width="407">
 
 <img src="python_04_assets/2022-07-25-16-11-39-image.png" title="" alt="" width="409">
