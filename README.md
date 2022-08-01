@@ -8,12 +8,18 @@
 
 # 파이썬 정리
 
-1. 프로그래밍
+1. python_01
 
-2. python_01
+2. python_02
 
-3. python_02
+3. python_03
 
-4. python_03
+4. python_04
 
-5. python_04
+
+
+
+
+# 웹 정리
+
+1. Web_1
