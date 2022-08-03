@@ -62,8 +62,6 @@
 
 ![](Web_2_assets/2022-08-03-15-35-22-image.png)
 
-
-
 ## Float 속성
 
 * none : 기본값
@@ -74,8 +72,6 @@
 
 ![](Web_2_assets/2022-08-03-15-36-04-image.png)
 
-
-
 ## Float 예시 1
 
 ![](Web_2_assets/2022-08-03-15-36-23-image.png)
@@ -83,8 +79,6 @@
 ![](Web_2_assets/2022-08-03-15-36-30-image.png)
 
 ![](Web_2_assets/2022-08-03-15-36-43-image.png)
-
-
 
 ## Float 활용 사례
 
@@ -128,8 +122,6 @@
 
 ![](Web_2_assets/2022-08-03-15-41-15-image.png)
 
-
-
 ## Flexbox 구성 요소
 
 * Flex Container (부모 요소)
@@ -146,13 +138,9 @@
 
 ![](Web_2_assets/2022-08-03-15-42-36-image.png)
 
-
-
 ## flexbox 시작
 
 ![](Web_2_assets/2022-08-03-15-44-12-image.png)
-
-
 
 ## Flex 속성
 
@@ -173,8 +161,6 @@
   * align-items (모든 아이템을 cross axis 기준으로)
   
   * align-self (개별 아이템)
-
-
 
 ### flex-direction
 
@@ -216,15 +202,11 @@
 
 ![](Web_2_assets/2022-08-03-15-49-42-image.png)
 
-
-
 ### align-content
 
 * Cross axis를 기준으로 공간 배분(아이템이 한 줄로 배치되는 경우 확인할 수 없음)
 
 ![](Web_2_assets/2022-08-03-15-50-21-image.png)
-
-
 
 ### justify-content & align-content
 
@@ -242,15 +224,11 @@
   
   * space-evenly : 전체 영역에서 아이템 간 간격을 균일하게 분배
 
-
-
 ## align-items
 
 * 모든 아이템을 Cross axis를 기준으로 정렬
 
 ![](Web_2_assets/2022-08-03-15-53-35-image.png)
-
-
 
 ## align-self
 
@@ -259,8 +237,6 @@
   * <mark>주의! 해당 속성은 컨테이너에 적용하는 것이 아니라 개별 아이템에 적용</mark>
 
 ![](Web_2_assets/2022-08-03-15-54-37-image.png)
-
-
 
 ## align-items & align-self
 
@@ -276,8 +252,6 @@
   
   * baseline : 텍스트 baseline에 기준선을 맞춤
 
-
-
 ## Flex에 적용하는 속성
 
 * 기타 속성
@@ -287,8 +261,6 @@
   * order : 배치 순서
 
 ![](Web_2_assets/2022-08-03-15-56-15-image.png)
-
-
 
 ## 활용 레이아웃-수직 수평 가운데 정렬
 
@@ -312,8 +284,6 @@
 
 ![](Web_2_assets/2022-08-03-15-57-47-image.png)
 
-
-
 ## The world most popular front - end open source
 
 ![](Web_2_assets/2022-08-03-15-58-18-image.png)
@@ -322,13 +292,9 @@
 
 ![](Web_2_assets/2022-08-03-15-58-41-image.png)
 
-
-
 ## 편하게 사용해보자
 
 ![](Web_2_assets/2022-08-03-15-59-02-image.png)
-
-
 
 ## CDN
 
@@ -350,8 +316,6 @@
 
 ![](Web_2_assets/2022-08-03-16-00-23-image.png)
 
-
-
 ## spacing
 
 ![](Web_2_assets/2022-08-03-16-00-39-image.png)
@@ -372,13 +336,9 @@
 
 ![](Web_2_assets/2022-08-03-16-01-39-image.png)
 
-
-
 ## spacing 종합
 
 ![](Web_2_assets/2022-08-03-16-01-54-image.png)
-
-
 
 ## spacing 실습
 
@@ -396,19 +356,13 @@
 
 ![](Web_2_assets/2022-08-03-16-02-46-image.png)
 
-
-
 ## Text
 
 ![](Web_2_assets/2022-08-03-16-02-59-image.png)
 
-
-
 ## Display
 
 ![](Web_2_assets/2022-08-03-16-04-55-image.png)
-
-
 
 ## Position
 
@@ -430,15 +384,11 @@
 
 ![](Web_2_assets/2022-08-03-16-06-23-image.png)
 
-
-
 ## Buttons
 
 * 클릭 했을 때 어떤 동작이 일어나도록 하는 요소
 
 ![](Web_2_assets/2022-08-03-16-06-48-image.png)
-
-
 
 ## Dropdowns
 
@@ -448,8 +398,6 @@
 
 ![](Web_2_assets/2022-08-03-16-07-42-image.png)
 
-
-
 ## Forms > Form controls
 
 * form-control 클래스를 사용해 input 및 form 태그를 스타일링할 수 있습니다.
@@ -457,8 +405,6 @@
 ![](Web_2_assets/2022-08-03-16-08-20-image.png)
 
 ![](Web_2_assets/2022-08-03-16-08-26-image.png)
-
-
 
 ## Navbar
 
@@ -468,8 +414,6 @@
 
 ![](Web_2_assets/2022-08-03-16-09-06-image.png)
 
-
-
 ## Carousel
 
 * 콘텐츠(사진)을 순환시키기 위한 슬라이드쇼
@@ -477,8 +421,6 @@
 ![](Web_2_assets/2022-08-03-16-09-28-image.png)
 
 ![](Web_2_assets/2022-08-03-16-09-33-image.png)
-
-
 
 ## Modal
 
@@ -492,13 +434,9 @@
 
 ![](Web_2_assets/2022-08-03-16-10-31-image.png)
 
-
-
 ## Flexbox in Bootstrap
 
 ![](Web_2_assets/2022-08-03-16-10-50-image.png)
-
-
 
 ## Card > Grid Card
 
@@ -508,13 +446,9 @@
 
 * 화면이 작아지면 1줄에 표시되는 카드의 개수가 줄어듬
 
-
-
 ## Responsive Web
 
 ![](Web_2_assets/2022-08-03-16-12-14-image.png)
-
-
 
 ## Responsive Web Design
 
@@ -548,8 +482,6 @@
 
 ![](Web_2_assets/2022-08-03-16-16-33-image.png)
 
-
-
 ## Bootstrap grid system
 
 * Bootstrap Grid system은 flexbox로 제작됨
@@ -562,8 +494,6 @@
   
   * 6개의 grid breakpoints
 
-
-
 ## Grid system
 
 ![](Web_2_assets/2022-08-03-16-18-26-image.png)
@@ -572,15 +502,11 @@
 
 ![](Web_2_assets/2022-08-03-16-18-58-image.png)
 
-
-
 ## Grid system breakpoints
 
 ![](Web_2_assets/2022-08-03-16-19-21-image.png)
 
 ![](Web_2_assets/2022-08-03-16-22-33-image.png)
-
-
 
 ## 연습해보기
 
@@ -607,5 +533,3 @@
 ![](Web_2_assets/2022-08-03-16-20-52-image.png)
 
 ![](Web_2_assets/2022-08-03-16-21-03-image.png)
-
-
