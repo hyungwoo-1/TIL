@@ -1,10 +1,12 @@
-## 분류
+# 분류
 
-### GIT 정리
+---
+
+# GIT 정리
 
 1. [Git basic 정리](./git/Git%20basic.md)
 
-# 
+---
 
 # 파이썬 정리
 
@@ -16,11 +18,18 @@
 
 4. python_04
 
+---
+
 # 웹 정리
 
 1. Web_1
 2. Web_2
 
+---
+
 # 알고리즘
 
 1. Algorithm_1
+2. Algorithm_2
+3. Algorithm_3
+4. Algorithm_4
