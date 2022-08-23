@@ -12,7 +12,7 @@
 
 * [참고] 부분집합, 순열
 
-* ~~분할정복~~
+* 분할정복
 
 ---
 
@@ -296,7 +296,7 @@
 
 #### 어떤 집합의 공집합과 자기자신을 포함한 모든 부분집합을 powerset이라고 하며 구하고자 하는 어떤 집합의 원소 개수가 n일 경우 부분집합의 개수는 2**n개 이다.
 
-#### 백트래킹 기법으로 powerset을 구해보자.
+#### 백트래킹 기법으로 <mark>powerset</mark>을 구해보자.
 
 * 앞에서 설명한 일반적인 백트래킹 접근 방법을 이용한다.
 
@@ -318,15 +318,54 @@
 
 
 
+#### 부분집합 알고리즘
+
+```python
+numbers = list(range(1, 6)) # 숫자
+selected = [False] * len(numbers)
+result = []
+
+def powerset(idx): # 몇번째 idx가 선택/선택X
+
+    if idx < len(numbers):     # 사용되는 숫자를 정할 수 있음
+        selected[idx] = True   # 사용 되었을 때
+        powerset(idx+1)        # 다음 자리 확인
+        selected[idx] = False  # 사용되지 않았을 때
+        powerset(idx+1)
+    else:
+        # 부분 집합을 뽑아내는 부분
+        res = []
+        for i in range(len(numbers)):
+            if selected[i]:
+                res.append(numbers[i])
+
+        result.append(res)
+
+powerset(0)
+print(result)
+```
+
+
+
+
+
 #### powerset을 구하는 백트래킹 알고리즘
 
 ![](Algorithm_5_assets/2022-08-22-12-57-41-image.png)
+
+* a : 선택된 자리를 나타낸 리스트
+
+* k : 현재 자리수
+
+* input : 갯수
 
 
 
 #### powerset을 구하는 백트래킹 알고리즘(계속)
 
 ![](Algorithm_5_assets/2022-08-22-12-58-00-image.png)
+
+* 사용 했는지 사용 안했는지 2가지의 case만 존재
 
 
 
