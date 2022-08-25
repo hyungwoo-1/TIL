@@ -558,5 +558,3 @@ print(boyer_moore(text, pattern))
 ![](Algorithm_3_assets/2022-08-12-15-10-28-image.png)
 
 ![](Algorithm_3_assets/2022-08-12-15-10-39-image.png)
-
-
