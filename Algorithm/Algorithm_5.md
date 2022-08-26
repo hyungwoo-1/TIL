@@ -64,8 +64,6 @@
 
 ![](Algorithm_5_assets/2022-08-22-12-39-52-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-39-59-image.png)
 
 * isp : 스택에 있는 것
@@ -74,35 +72,21 @@
 
 * stack의 top에는 우선순위가 선택된 문자보다 낮아야 한다.
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-40-05-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-12-40-13-image.png)
 
-*  icp > isp
+* icp > isp
   
   * 우선순위가 더높음
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-40-21-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-12-40-26-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-40-32-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-40-37-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-12-40-43-image.png)
 
@@ -110,37 +94,21 @@
   
   * push
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-40-49-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-12-40-54-image.png)
 
 * 닫는 괄호는 여는 괄호가 나올 때 까지 pop
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-41-00-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-12-41-07-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-41-13-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-12-41-19-image.png)
 
-
-
 #### stack에 있는 top과 비교
-
-
 
 ---
 
@@ -168,33 +136,19 @@
 
 ![](Algorithm_5_assets/2022-08-22-12-42-52-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-42-57-image.png)
 
 * 먼저 꺼낸 숫자를 뒤에 넣어줌
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-43-01-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-12-43-05-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-43-10-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-12-43-16-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-43-23-image.png)
-
-
 
 ---
 
@@ -270,17 +224,11 @@
 
 ![](Algorithm_5_assets/2022-08-22-12-52-38-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-52-44-image.png)
-
-
 
 #### 상태 공간 트리
 
 ![](Algorithm_5_assets/2022-08-22-12-52-59-image.png)
-
-
 
 #### 깊이 우선 검색 vs 백트래킹
 
@@ -312,11 +260,7 @@
 
 ![](Algorithm_5_assets/2022-08-22-12-57-11-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-57-23-image.png)
-
-
 
 #### 부분집합 알고리즘
 
@@ -345,10 +289,6 @@ powerset(0)
 print(result)
 ```
 
-
-
-
-
 #### powerset을 구하는 백트래킹 알고리즘
 
 ![](Algorithm_5_assets/2022-08-22-12-57-41-image.png)
@@ -359,15 +299,11 @@ print(result)
 
 * input : 갯수
 
-
-
 #### powerset을 구하는 백트래킹 알고리즘(계속)
 
 ![](Algorithm_5_assets/2022-08-22-12-58-00-image.png)
 
 * 사용 했는지 사용 안했는지 2가지의 case만 존재
-
-
 
 #### 예) {1, 2, 3}을 포함하는 모든 순열을 생성하는 함수
 
@@ -375,19 +311,13 @@ print(result)
 
 ![](Algorithm_5_assets/2022-08-22-12-58-48-image.png)
 
-
-
 #### 백트래킹을 이용하여 순열 구하기
 
 * 접근 방법은 앞의 부분집합 구하는 방법과 유사하다.
 
 ![](Algorithm_5_assets/2022-08-22-12-59-16-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-12-59-27-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-12-59-39-image.png)
 
@@ -407,19 +337,11 @@ print(result)
 
 ![](Algorithm_5_assets/2022-08-22-13-00-27-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-00-36-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-13-00-42-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-00-47-image.png)
-
-
 
 ---
 
@@ -429,11 +351,7 @@ print(result)
 
 ![](Algorithm_5_assets/2022-08-22-13-01-05-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-01-15-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-13-01-33-image.png)
 
@@ -469,15 +387,9 @@ print(result)
 
 ![](Algorithm_5_assets/2022-08-22-13-05-31-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-05-51-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-06-00-image.png)
-
-
 
 ---
 
@@ -499,11 +411,7 @@ print(result)
 
 ![](Algorithm_5_assets/2022-08-22-13-08-08-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-08-18-image.png)
-
-
 
 #### 퀵 정렬 수행 과정
 
@@ -513,39 +421,21 @@ print(result)
 
 ![](Algorithm_5_assets/2022-08-22-13-09-14-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-09-36-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-13-09-44-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-09-52-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-13-09-59-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-10-14-image.png)
-
-
 
 ![](Algorithm_5_assets/2022-08-22-13-10-22-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-10-32-image.png)
 
-
-
 ![](Algorithm_5_assets/2022-08-22-13-10-38-image.png)
-
-
 
 #### 퀵정렬의 최악의 시간 복잡도는 O(n**2)로, 합병정렬에 비해 좋지 못하다.
 
