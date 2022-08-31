@@ -1048,8 +1048,6 @@ source venv/Scripts/activate
   
   * 그래서 Django는 URL을 정규화하여 검색 엔진 로봇이 혼동하지 않게 해야 함
 
-
-
 #### [참고] URL 정규화
 
 * 정규 URL(=오리지널로 평가되어야 할 URL)을 명시하는 것
@@ -1057,8 +1055,6 @@ source venv/Scripts/activate
 * 복수의 페이지에서 같은 콘텐츠가 존재하는 것을 방지하기 위함
 
 * "Django에서는 trailing slash가 없는 요청에 대해 자동으로 slash를 추가하여 통합된 하나의 콘텐츠로 볼 수 있도록 한다."
-
-
 
 ---
 
@@ -1070,8 +1066,6 @@ source venv/Scripts/activate
 
 * 템플릿의 많은 부분이 중복되고, 일부분만 변경되는 상황에서 비슷한 URL과 템플릿을 계속해서 만들어야 할까?
 
-
-
 #### Variable routing
 
 * URL 주소를 변수로 사용하는 것을 의미
@@ -1080,53 +1074,41 @@ source venv/Scripts/activate
 
 * 즉, 변수 값에 따라 하나의 path()에 여러 페이지를 연결 시킬 수 있음
 
-
-
 #### Variable routing 작성
 
 * 변수는 "<>"에 정의하며 view 함수의 인자로 할당됨
 
 * 기본 타입은 string 이며 5가지 타입으로 명시할 수 있음
   
-  1.  str
+  1. str
      
      * '/'를 제외하고 비어 있지 않은 모든 문자열
      
      * 작성하지 않을 경우 기본 값
   
-  2.  int
+  2. int
      
      * 0 또는 양의 정수와 매치
   
-  3.  slug
+  3. slug
   
-  4.  uuid
+  4. uuid
   
-  5.  path
+  5. path
 
 ![](Django_1_assets/2022-08-31-00-37-38-image.png)
-
-
 
 #### View 함수 작성
 
 * variable routing으로 할당된 변수를 인자로 받고 템플릿 변수로 사용할 수 있음
 
-
-
 ![](Django_1_assets/2022-08-31-00-40-48-image.png)
 
-
-
 ![](Django_1_assets/2022-08-31-00-40-55-image.png)
-
-
 
 #### [참고] Routing(라우팅)
 
 * 어떤 네트워크 안에서 통신 데이터를 보낼 때 최적의 경로를 선택하는 과정을 뜻함
-
-
 
 ---
 
@@ -1154,11 +1136,7 @@ source venv/Scripts/activate
 
 ![](Django_1_assets/2022-08-31-00-46-21-image.png)
 
-
-
 ![](Django_1_assets/2022-08-31-00-46-28-image.png)
-
-
 
 #### Including other URLconfs
 
@@ -1168,15 +1146,11 @@ source venv/Scripts/activate
 
 ![](Django_1_assets/2022-08-31-00-47-57-image.png)
 
-
-
 * 이제 메인 페이지의 주소는 이렇게 바뀌었음
 
 * http://127.0.0.1:8000/index/
   
   -> http://128.0.0.1:8000/articles/index/
-
-
 
 #### include()
 
@@ -1184,27 +1158,19 @@ source venv/Scripts/activate
 
 * 함수 include()를 만나게 되면 URL의 그 시점까지 일치하는 부분을 잘라내고, 남은 문자열 부분을 후속 처리를 위해 include된 URLconf로 전달
 
-
-
 #### URL 구조의 변화
 
 * 앱의 URL을 project의 urls.py에서 관리
 
 ![](Django_1_assets/2022-08-31-00-50-19-image.png)
 
-
-
 * 복수 개의 앱을 URL을 project의 urls.py에서 관리
 
 ![](Django_1_assets/2022-08-31-00-50-42-image.png)
 
-
-
 * 각각의 앱에서 URL을 관리
 
 ![](Django_1_assets/2022-08-31-00-50-55-image.png)
-
-
 
 ---
 
@@ -1218,8 +1184,6 @@ source venv/Scripts/activate
 
 * 그렇다면 "index/" 주소를 사용했떤 모든 곳을 찾아서 변경해야 하는 번거로움이 발생함
 
-
-
 #### Naming URL patterns
 
 * 이제는 링크에 URL을 직접 작성하는 것이 아니라 "path()" 함수의 name 인자를 정의해서 사용
@@ -1232,8 +1196,6 @@ source venv/Scripts/activate
 
 ![](Django_1_assets/2022-08-31-00-53-59-image.png)
 
-
-
 #### Built-in tag-"url"
 
 ![](Django_1_assets/2022-08-31-00-54-25-image.png)
@@ -1242,29 +1204,19 @@ source venv/Scripts/activate
 
 * 템플릿에 URL을 하드 코딩하지 않고도 DRY 원칙을 위반하지 않으면서 링크를 출력하는 방법
 
-
-
 #### url 태그 사용하기
 
 ![](Django_1_assets/2022-08-31-00-55-10-image.png)
 
-
-
 ![](Django_1_assets/2022-08-31-00-55-16-image.png)
 
-
-
 ![](Django_1_assets/2022-08-31-00-55-22-image.png)
-
-
 
 #### url 태그 출력 확인하기
 
 * 마지막으로 개발자 도구를 통해 url 태그가 URL 패턴 이름과 일치하는 절대 경로 주소를 반환하는 것을 확인해보기
 
 ![](Django_1_assets/2022-08-31-00-56-02-image.png)
-
-
 
 #### [참고] DRY 원칙
 
@@ -1275,8 +1227,6 @@ source venv/Scripts/activate
 * 동일한 코드가 반복된다는 것은 잠재적인 버그의 위협을 증가 시키고 반복되는 코드를 변경해야 하는 경우, 반복되는 모든 코드를 찾아서 수정해야 함
 
 * 이는 프로젝트 규모가 커질수록 애플리케이션의 유지 보수 비용이 커짐
-
-
 
 ---
 
@@ -1300,8 +1250,6 @@ source venv/Scripts/activate
    
    * 템플릿 상속의 기초가 되는 철학
 
-
-
 #### Framework의 성격
 
 * 독선적
@@ -1321,8 +1269,6 @@ source venv/Scripts/activate
   * 이는 개발자들이 특정 작업을 완수하는데 가장 적절한 도구들을 이용할 수 있는 자유도가 높음
   
   * 하지만 개발자 스스로가 그 도구들을 찾아야 한다는 수고가 필요
-
-
 
 #### Django Framework의 성격
 
