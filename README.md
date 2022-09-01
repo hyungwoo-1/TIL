@@ -4,7 +4,7 @@
 
 # GIT 정리
 
-1. [Git basic 정리](./git/Git%20basic.md)
+1. Git basic 정리
 
 ---
 
@@ -33,3 +33,15 @@
 2. Algorithm_2
 3. Algorithm_3
 4. Algorithm_4
+5. Algorithm_5
+6. Algorithm_6
+
+
+
+---
+
+# 장고
+
+1. Django_1
+
+2. Django_2
