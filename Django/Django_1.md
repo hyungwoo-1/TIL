@@ -1068,7 +1068,7 @@ source venv/Scripts/activate
 
 #### Variable routing
 
-* URL 주소를 변수로 사용하는 것을 의미
+* <u>URL 주소를 <mark>변수</mark></u>로 사용하는 것을 의미
 
 * URL의 일부를 변수로 지정하여 view 함수의 인자로 넘길 수 있음
 
@@ -1109,6 +1109,14 @@ source venv/Scripts/activate
 #### [참고] Routing(라우팅)
 
 * 어떤 네트워크 안에서 통신 데이터를 보낼 때 최적의 경로를 선택하는 과정을 뜻함
+
+
+
+#### variable routing  사용
+
+![](Django_1_assets/2022-09-01-10-27-29-image.png)
+
+![](Django_1_assets/2022-09-01-10-28-02-image.png)
 
 ---
 

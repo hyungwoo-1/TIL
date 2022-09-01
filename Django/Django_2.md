@@ -643,15 +643,17 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 #### QuerySet
 
+* DB 데이터를 담고 있는 <mark>유사 리스트</mark> (음수 인덱스는 사용X)
+
 * 데이터베이스에게서 전달 받은 객체 목록(데이터 모음)
   
   * 순회가 가능한 데이터로써 1개 이상의 데이터를 불러와 사용할 수 있음
 
-* Django ORM을 통해 만들어진 자료형이며, 필터를 걸거나 정렬 등을 수행할 수 있음
+* Django ORM을 통해 만들어진 자료형이며, <mark>필터</mark>를 걸거나 <u>정렬</u> 등을 수행할 수 있음
 
 * "objects" manager를 사용하여 복수의 데이터를 가져오는 queryset method를 사용할 때 반환되는 객체
 
-* 단, 데이터베이스가 단일한 객체를 반환 할 때는 QuerySet이 아닌 모델(Class)의 인스턴스로 반환됨
+* 단, 데이터베이스가 단일한 객체를 반환 할 때는 QuerySet이 아닌 모델(Class)의 인스턴스로 반환됨 `.get()`
 
 #### QuerySet API
 
@@ -699,8 +701,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
      
      * 인스턴스로 save 메서드 호출
 
- 
-
 #### 첫번째 방법
 
 ![](Django_2_assets/2022-08-31-18-31-11-image.png)
@@ -709,11 +709,7 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-18-31-44-image.png)
 
-
-
 ![](Django_2_assets/2022-08-31-18-32-43-image.png)
-
-
 
 #### 두번째 방법
 
@@ -723,15 +719,11 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-21-43-03-image.png)
 
-
-
 #### 세번째 방법
 
 * QuerySet API 중 create() 메서드 활용
 
 ![](Django_2_assets/2022-08-31-21-43-32-image.png)
-
-
 
 #### <mark> .save()</mark>
 
@@ -745,8 +737,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 * 단순히 모델 클래스를 통해 인스턴스를 생성하는 것은 DB에 영향을 미치지 않기 때문에 반드시 save를 호출해야 테이블에 레코드가 생성됨
 
-
-
 ---
 
 ## READ
@@ -759,11 +749,9 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 * QuerySet API method는 크게 2가지로 분류됨
   
-  1.  Methods that "return new querysets"
+  1. Methods that "return new querysets"
   
-  2.  Methods that "do not return querysets"
-
-
+  2. Methods that "do not return querysets"
 
 #### all()
 
@@ -772,8 +760,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 * 전체 데이터 조회
 
 ![](Django_2_assets/2022-08-31-22-47-14-image.png)
-
-
 
 #### get()
 
@@ -789,15 +775,11 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-22-48-44-image.png)
 
-
-
 #### filter()
 
 * 지정된 조회 매개 변수와 일치하는 객체를 포함하는 새 QuerySet을 반환
 
 ![](Django_2_assets/2022-08-31-22-49-11-image.png)
-
-
 
 #### Field lookups
 
@@ -813,6 +795,48 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 
 
+#### 실습
+
+![](Django_2_assets/2022-09-01-13-50-36-image.png)
+
+![](Django_2_assets/2022-09-01-12-53-49-image.png)
+
+![](Django_2_assets/2022-09-01-12-54-13-image.png)
+
+![](Django_2_assets/2022-09-01-12-53-26-image.png)
+
+![](Django_2_assets/2022-09-01-13-01-48-image.png)
+
+![](Django_2_assets/2022-09-01-13-02-01-image.png)
+
+![](Django_2_assets/2022-09-01-13-10-05-image.png)
+
+![](Django_2_assets/2022-09-01-13-10-14-image.png)
+
+![](Django_2_assets/2022-09-01-13-12-07-image.png)
+
+
+
+![](Django_2_assets/2022-09-01-13-26-02-image.png)
+
+![](Django_2_assets/2022-09-01-13-26-18-image.png)
+
+![](Django_2_assets/2022-09-01-13-51-21-image.png)
+
+![](Django_2_assets/2022-09-01-13-57-01-image.png)
+
+
+
+![](Django_2_assets/2022-09-01-14-10-24-image.png)
+
+
+
+![](Django_2_assets/2022-09-01-14-10-58-image.png)
+
+![](Django_2_assets/2022-09-01-14-17-54-image.png)
+
+![](Django_2_assets/2022-09-01-14-17-43-image.png)
+
 ---
 
 ## Update
@@ -821,15 +845,25 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 #### Update 과정
 
-1.  수정하고자 하는 article 인스턴스 객체를 조회 후 반환 값을 저장
+1. 수정하고자 하는 article 인스턴스 객체를 조회 후 반환 값을 저장
 
-2.  article 인스턴스 객체의 인스턴스 변수 값을 새로운 값으로 할당
+2. article 인스턴스 객체의 인스턴스 변수 값을 새로운 값으로 할당
 
-3.  save() 인스턴스 메서드 호출
+3. save() 인스턴스 메서드 호출
 
 ![](Django_2_assets/2022-08-31-23-00-46-image.png)
 
+* DB에서 값을 들고온다 => 변경한다 => 저장한다.
 
+
+
+#### 실습
+
+![](Django_2_assets/2022-09-01-15-12-35-image.png)
+
+![](Django_2_assets/2022-09-01-15-13-16-image.png)
+
+![](Django_2_assets/2022-09-01-15-12-56-image.png)
 
 ---
 
@@ -839,11 +873,21 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ## Delete 과정
 
-1.  삭제하고자 하는 article 인스턴스 객체를 조회 후 반환 값을 저장
+1. 삭제하고자 하는 article 인스턴스 객체를 조회 후 반환 값을 저장
 
-2.  delete() 인스턴스 메서드 호출
+2. delete() 인스턴스 메서드 호출
 
 ![](Django_2_assets/2022-08-31-23-12-59-image.png)
+
+
+
+#### 실습
+
+![](Django_2_assets/2022-09-01-15-19-24-image.png)
+
+![](Django_2_assets/2022-09-01-15-19-10-image.png)
+
+![](Django_2_assets/2022-09-01-15-19-37-image.png)
 
 
 
@@ -853,13 +897,9 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-23-16-53-image.png)
 
-
-
 * Django shell에서 변화된 출력 확인
 
 ![](Django_2_assets/2022-08-31-23-17-18-image.png)
-
-
 
 ---
 
@@ -870,8 +910,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 #### 개요
 
 * 이전에 익힌 QuerySet API를 통해 view함수에서 직접 CRUD 구현하기
-
-
 
 ---
 
@@ -887,19 +925,11 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-23-20-06-image.png)
 
-
-
 #### Url 분리 및 연결
 
 ![](Django_2_assets/2022-08-31-23-20-23-image.png)
 
-
-
 ![](Django_2_assets/2022-08-31-23-20-31-image.png)
-
-
-
-
 
 #### index 페이지 작성
 
@@ -908,8 +938,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 ![](Django_2_assets/2022-08-31-23-21-03-image.png)
 
 ![](Django_2_assets/2022-08-31-23-21-10-image.png)
-
-
 
 ---
 
@@ -924,8 +952,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 ![](Django_2_assets/2022-08-31-23-21-50-image.png)
 
 ![](Django_2_assets/2022-08-31-23-21-57-image.png)
-
-
 
 ---
 
@@ -945,8 +971,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
     
     * "create" view function
 
-
-
 #### New
 
 ![](Django_2_assets/2022-08-31-23-23-31-image.png)
@@ -955,13 +979,9 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-23-23-47-image.png)
 
-
-
 * new 페이지로 이동할 수 있는 하이퍼 링크 작성
 
 ![](Django_2_assets/2022-08-31-23-24-07-image.png)
-
-
 
 #### Create
 
@@ -969,15 +989,11 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-23-24-38-image.png)
 
-
-
 * 2번째 생성 방식을 사용하는 이유
   
   * create 메서드가 더 간단해 보이지만 추후 데이터가 저장되기 전에 유효성 검사 과정을 거치게 될 예정
   
   * 유효성 검사가 진행된 후에 save 메서드가 호출되는 구조를 택하기 위함
-
-
 
 * 게시글 작성 후 확인
 
@@ -985,29 +1001,23 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-23-25-43-image.png)
 
-
-
 * 게시글 작성 후 index 페이지로 돌아가도록 함
 
 ![](Django_2_assets/2022-08-31-23-26-41-image.png)
 
-
-
 #### 2가지 문제점 발생
 
-1.  게시글 작성 후 index 페이지가 출력되지만 게시글은 조회되지 않음
+1. 게시글 작성 후 index 페이지가 출력되지만 게시글은 조회되지 않음
    
    * create 함수에서 index.html 문서를 렌더링할 때 context 데이터와 함께 렌더링 하지 않았기 때문
    
    * index 페이지 url로 다시 요청을 보내면 정상적으로 출력됨
 
-2.  게시글 작성 후 URL은 여전히 create에 머물러 있음
+2. 게시글 작성 후 URL은 여전히 create에 머물러 있음
    
    * index view 함수를 통해 렌더링 된 것이 아니기 때문
    
    * index view 함수의 반환 값이 아닌 단순히 index 페이지만 render 되었을 뿐
-
-
 
 #### Django shortcut function - "redirect()"
 
@@ -1023,13 +1033,9 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
   
   ![](Django_2_assets/2022-08-31-23-30-45-image.png)
 
-
-
 * 동작 확인 후 불필요해진 create.html는 삭제
 
 ![](Django_2_assets/2022-08-31-23-31-10-image.png)
-
-
 
 #### redirect 동작 이해하기
 
@@ -1037,19 +1043,15 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-23-31-32-image.png)
 
-
-
 * 동작 원리
   
-  1.  클라이언트가 create url로 요청을 보냄
+  1. 클라이언트가 create url로 요청을 보냄
   
-  2.  create view 함수의 redirect 함수가 302 status code를 응답
+  2. create view 함수의 redirect 함수가 302 status code를 응답
   
-  3.  응답 받은 브라우저는 redirect 인자에 담긴 주소(index)로 사용자를 이동시키기 위해 index url로 Django에 재요청
+  3. 응답 받은 브라우저는 redirect 인자에 담긴 주소(index)로 사용자를 이동시키기 위해 index url로 Django에 재요청
   
-  4.  index page를 정상적으로 응답 받음 (200 status code)
-
-
+  4. index page를 정상적으로 응답 받음 (200 status code)
 
 #### [참고] 302 Found
 
@@ -1057,25 +1059,21 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 * 해당 상태 코드를 응답 받으면 브라우저는 사용자를 해당 URL의 페이지로 이동 시킴
 
-
-
 #### HTTP response status code
 
 * 클라이언트에게 특정 HTTP <mark>요청이 성공적으로 완료되었는지 여부</mark>를 알려줌
 
 * 응답은 5개의 그룹으로 나뉘어짐
   
-  1.  Informational responses (1xx)
+  1. Informational responses (1xx)
   
-  2.  Successful responses (2xx)
+  2. Successful responses (2xx)
   
-  3.  Redirection messages (3xx)
+  3. Redirection messages (3xx)
   
-  4.  Client error responses (4xx)
+  4. Client error responses (4xx)
   
-  5.  Server error responses (5xx)
-
-
+  5. Server error responses (5xx)
 
 #### HTTP method GET 재검토
 
@@ -1087,35 +1085,31 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 * GET이 아닌 다른 HTTP method를 알아보기
 
-
-
 #### HTTP request method
 
 * HTTP는 request method를 정의하여, 주어진 리소스에 수행하길 원하는 행동을 나타냄
 
 * GET
   
-  * 특정 리소스를 가져오도록 요청할 때 사용
+  * <u>특정 <mark>리소스</mark>를 가져오도록 요청</u>할 때 사용
   
-  * 반드시 데이터를 가져올 때만 사용해야 함
+  * <u>반드시 데이터를 <mark>가져올 때</mark>만 **사용**</u>해야 함
   
-  * DB에 변화를 주지 않음
+  * <u>DB</u>에 **변화를 주지 않음**
   
   * CRUD에서 R 역할을 담당
 
-* POST
+* <mark>POST</mark>
   
-  * 서버로 데이터를 전송할 때 사용
+  * <u>서버로 <mark>데이터</mark></u>를 <u>전송</u>할 때 사용
   
-  * 서버에 변경사항을 만듦
+  * 서버에 <u>변경사항을<mark> 만듦</mark></u>
   
-  * 리소스를 생성/변경하기 위해 데이터를 HTTP body에 담아 전송
+  * 리소스를 생성/변경하기 위해 데이터를 <u>HTTP <mark>body</mark>에 담아 전송</u>
   
-  * GET의 쿼리 스트링 파라미터와 다르게 URL로 보내지지 않음
+  * GET의 <u>쿼리 스트링 파라미터</u>와 다르게 <u>URL로 보내지지 않음</u>
   
-  * CRUD에서 C/U/D 역할을 담당
-
-
+  * CRUD에서 <u>C/U/D <mark>역할</mark></u>을 담당
 
 #### POST method 적용하기
 
@@ -1125,21 +1119,15 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-09-01-00-05-35-image.png)
 
-
-
 * 그럼 왜 검색에서는 GET을 사용할까?
   
   * 검색은 서버에 영향을 미치는 것이 아닌 특정 데이터를 조회만 하는 요청이기 때문
   
   * 특정 페이지를 조회하는 요청을 보내는 HTML의 a tag 또한 GET을 사용
 
-
-
 * 코드를 변경하고 URL에서 쿼리 스트링 파라미터가 없어진 것을 확인해보기
 
 ![](Django_2_assets/2022-09-01-00-09-59-image.png)
-
-
 
 * 게시글 작성 후 서버로그 확인하기
 
@@ -1151,13 +1139,9 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-09-01-00-11-34-image.png)
 
-
-
 * 데이터가 담긴 위치가 바뀌었기 때문에 view함수에서도 다음과 같이 수정 필요
 
 ![](Django_2_assets/2022-09-01-00-11-57-image.png)
-
-
 
 #### HTTP methods 정리
 
@@ -1166,8 +1150,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 * TMDB API나 다른 API문서에서 봤던 요청 예시 문서에서 등장했던 친구들이 바로 HTTP methods 였음
 
 ![](Django_2_assets/2022-09-01-00-12-54-image.png)
-
-
 
 #### [참고] 403 Forbidden
 
@@ -1180,8 +1162,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
   "작성자가 누구인지 모르기 때문에 함부로 작성할 수 없다" 라는 의미
 
 * 모델(DB)을 조작하는 것은 단순 조회와 달리 최소한의 신원 확인이 필요하기 때문
-
-
 
 #### CSRF
 
@@ -1197,8 +1177,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
   
   * 관리자는 해당 사이트에 정보를 입력하여 관련 정보가 해커에게 보내졌고, 해커는 옥X 사이트의 관리자 권한을 얻어냄 (당시 1860만건 유출)
 
-
-
 #### CSRF 공격 방어
 
 * "Security Token 사용 방식 (CSRF Token)"
@@ -1213,4 +1191,246 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 
 
-152
+#### csrf_token 템플릿 태그
+
+![](Django_2_assets/2022-09-01-16-12-48-image.png)
+
+* 해당 태그가 없다면 Django 서버는 요청에 대해 403 forbidden으로 응답
+
+* 템플릿에서 내부 URL로 향하는 Post form을 사용하는 경우에 사용
+  
+  * 외부 URL로 향하는 POST form에 대해서는 CSRF 토큰이 유출되어 취약성을 유발할 수 있기 때문에 사용해서는 안됨
+
+* 태그 작성 후 확인하기
+
+* input type이 hidden으로 작성되며 value는 Django에서 생성한 hash 값으로 설정ㅁ
+
+![](Django_2_assets/2022-09-01-16-14-25-image.png)
+
+
+
+![](Django_2_assets/2022-09-01-16-14-31-image.png)
+
+
+
+#### csrf_token 템플릿 태그 정리
+
+* 마지막으로 게시글을 작성하고 문제없이 저장되는지 확인해보기
+
+* "csrf_token은 해당 POSt 요청이 내가 보낸 것 인지를 검증하는 것"
+
+
+
+---
+
+## READ 2 (detail page)
+
+---
+
+#### 개요
+
+* 개별 게시글 상세 페이지 제작
+
+* 모든 게시글 마다 뷰 함수와 템플릿 파일을 만들 수는 없음
+  
+  * 글의 번호(pk)를 활용해서 하나의 뷰 함수와 템플릿 파일로 대응
+
+* 무엇을 활용할 수 있을까?
+  
+  * Variable Routing
+
+
+
+#### urls
+
+* URL로 특정 게시글을 조회할 수 있는 번호를 받음
+
+![](Django_2_assets/2022-09-01-16-17-46-image.png)
+
+
+
+#### Views
+
+* `Article.objects.get(pk=pk)`  에서 오른쪽 pk는 variable routing을 통해 받은 pk, 왼쪽 pk는 DB에 저장된 레코드의 id 컬럼
+
+![](Django_2_assets/2022-09-01-16-24-24-image.png)
+
+
+
+#### templates
+
+![](Django_2_assets/2022-09-01-16-24-39-image.png)
+
+![](Django_2_assets/2022-09-01-16-24-46-image.png)
+
+
+
+#### redirect 인자 변경
+
+![](Django_2_assets/2022-09-01-16-25-06-image.png)
+
+
+
+---
+
+## DELETE
+
+---
+
+#### urls
+
+* 모든 글을 삭제 하는 것이 아니라 삭제하고자 하는 특정 글을 조회 후 삭제해야 함
+
+![](Django_2_assets/2022-09-01-16-43-10-image.png)
+
+
+
+#### views
+
+![](Django_2_assets/2022-09-01-16-43-24-image.png)
+
+
+
+#### templates
+
+* Detail 페이지에 작성하며 DB에 영향을 미치기 때문에 POST method를 사용
+
+![](Django_2_assets/2022-09-01-16-43-56-image.png)
+
+
+
+----
+
+## UPDATE
+
+---
+
+#### 개요
+
+* 수정은 CREATE 로직과 마찬가지로 2개의 view 함수가 필요
+
+* 사용자의 입력을 받을 페이지를 렌더링 하는 함수 1개
+  
+  * "edit" view function
+
+* 사용자가 입력한 데이터를 전송 받아 DB에 저장하는 함수 1개
+  
+  * "update" view function
+
+
+
+#### Edit - urls & views
+
+![](Django_2_assets/2022-09-01-17-06-49-image.png)
+
+![](Django_2_assets/2022-09-01-17-06-57-image.png)
+
+
+
+#### Edit - templates
+
+* html 태그의 value 속성을 사용해 기존에 입력 되어 있던 데이터를 출력
+
+![](Django_2_assets/2022-09-01-17-07-32-image.png)
+
+
+
+* Edit 페이지로 이동하기 위한 하이퍼 링크 작성
+
+![](Django_2_assets/2022-09-01-17-07-57-image.png)
+
+
+
+#### Update 로직 작성
+
+![](Django_2_assets/2022-09-01-17-08-15-image.png)
+
+![](Django_2_assets/2022-09-01-17-08-22-image.png)
+
+![](Django_2_assets/2022-09-01-17-08-28-image.png)
+
+
+
+---
+
+## Admin site
+
+---
+
+#### 개요
+
+* Django의 가장 강력한 기능 중 하나인 automatic admin interface 알아보기
+
+* "관리자 페이지"
+  
+  * 사용자가 아닌 서버의 관리자가 활용하기 위한 페이지
+  
+  * 모델 class를 admin.py에 등록하고 관리
+  
+  * 레코드 생성 여부 확인에 매우 유용하며 직접 레코드를 삽입할 수도 있음
+
+
+
+#### admin 계정 생성
+
+![](Django_2_assets/2022-09-01-17-09-58-image.png)
+
+![](Django_2_assets/2022-09-01-17-10-06-image.png)
+
+
+
+#### admin site 로그인
+
+* http://127.0.0.1:8000/admin/ 로 접속 후 로그인
+
+* 계정만 만든 경우 Django 관리자 화면에서 모델 클래스는 보이지 않음
+
+![](Django_2_assets/2022-09-01-17-10-52-image.png)
+
+
+
+#### admin에 모델 클래스 등록
+
+* 모델의 record를 보기 위해서는 admin.py에 등록 필요
+
+![](Django_2_assets/2022-09-01-17-11-21-image.png)
+
+
+
+#### 등록된 모델 클래스 확인
+
+![](Django_2_assets/2022-09-01-17-11-38-image.png)
+
+
+
+#### 데이터 CRUD 테스트
+
+* admin 페이지에서 데이터를 조작해보기
+
+![](Django_2_assets/2022-09-01-17-12-04-image.png)
+
+
+
+---
+
+## 마무리
+
+---
+
+* Model
+  
+  * Django는 Model을 통해 데이터에 접속하고 관리
+
+* ORM
+  
+  * 객체지향 프로그래밍을 이용한 DB조작
+
+* Migrations
+  
+  * 모델에 생긴 변화(필드 추가, 모델 삭제 등)를 DB에 반영하는 방법(과정)
+
+* HTTP request & response
+  
+  * 요청에 행동을 표현하는 HTTP request method
+  
+  * 요청에 대한 성공 여부 응답을 숫자로 표현하는 HTTP response status codes
