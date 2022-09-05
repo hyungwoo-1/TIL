@@ -793,8 +793,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-22-59-35-image.png)
 
-
-
 #### 실습
 
 ![](Django_2_assets/2022-09-01-13-50-36-image.png)
@@ -815,8 +813,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-09-01-13-12-07-image.png)
 
-
-
 ![](Django_2_assets/2022-09-01-13-26-02-image.png)
 
 ![](Django_2_assets/2022-09-01-13-26-18-image.png)
@@ -825,11 +821,7 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-09-01-13-57-01-image.png)
 
-
-
 ![](Django_2_assets/2022-09-01-14-10-24-image.png)
-
-
 
 ![](Django_2_assets/2022-09-01-14-10-58-image.png)
 
@@ -855,8 +847,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 * DB에서 값을 들고온다 => 변경한다 => 저장한다.
 
-
-
 #### 실습
 
 ![](Django_2_assets/2022-09-01-15-12-35-image.png)
@@ -879,8 +869,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-08-31-23-12-59-image.png)
 
-
-
 #### 실습
 
 ![](Django_2_assets/2022-09-01-15-19-24-image.png)
@@ -888,8 +876,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 ![](Django_2_assets/2022-09-01-15-19-10-image.png)
 
 ![](Django_2_assets/2022-09-01-15-19-37-image.png)
-
-
 
 #### [참고] `__str__()`
 
@@ -1189,8 +1175,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
   
   * Django 는 DTL에서 csrf_token 템플릿 태그를 제공
 
-
-
 #### csrf_token 템플릿 태그
 
 ![](Django_2_assets/2022-09-01-16-12-48-image.png)
@@ -1207,19 +1191,13 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-09-01-16-14-25-image.png)
 
-
-
 ![](Django_2_assets/2022-09-01-16-14-31-image.png)
-
-
 
 #### csrf_token 템플릿 태그 정리
 
 * 마지막으로 게시글을 작성하고 문제없이 저장되는지 확인해보기
 
 * "csrf_token은 해당 POSt 요청이 내가 보낸 것 인지를 검증하는 것"
-
-
 
 ---
 
@@ -1239,15 +1217,11 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
   
   * Variable Routing
 
-
-
 #### urls
 
 * URL로 특정 게시글을 조회할 수 있는 번호를 받음
 
 ![](Django_2_assets/2022-09-01-16-17-46-image.png)
-
-
 
 #### Views
 
@@ -1255,21 +1229,15 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-09-01-16-24-24-image.png)
 
-
-
 #### templates
 
 ![](Django_2_assets/2022-09-01-16-24-39-image.png)
 
 ![](Django_2_assets/2022-09-01-16-24-46-image.png)
 
-
-
 #### redirect 인자 변경
 
 ![](Django_2_assets/2022-09-01-16-25-06-image.png)
-
-
 
 ---
 
@@ -1283,21 +1251,15 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-09-01-16-43-10-image.png)
 
-
-
 #### views
 
 ![](Django_2_assets/2022-09-01-16-43-24-image.png)
-
-
 
 #### templates
 
 * Detail 페이지에 작성하며 DB에 영향을 미치기 때문에 POST method를 사용
 
 ![](Django_2_assets/2022-09-01-16-43-56-image.png)
-
-
 
 ----
 
@@ -1317,15 +1279,11 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
   
   * "update" view function
 
-
-
 #### Edit - urls & views
 
 ![](Django_2_assets/2022-09-01-17-06-49-image.png)
 
 ![](Django_2_assets/2022-09-01-17-06-57-image.png)
-
-
 
 #### Edit - templates
 
@@ -1333,13 +1291,9 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-09-01-17-07-32-image.png)
 
-
-
 * Edit 페이지로 이동하기 위한 하이퍼 링크 작성
 
 ![](Django_2_assets/2022-09-01-17-07-57-image.png)
-
-
 
 #### Update 로직 작성
 
@@ -1348,8 +1302,6 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 ![](Django_2_assets/2022-09-01-17-08-22-image.png)
 
 ![](Django_2_assets/2022-09-01-17-08-28-image.png)
-
-
 
 ---
 
@@ -1369,15 +1321,11 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
   
   * 레코드 생성 여부 확인에 매우 유용하며 직접 레코드를 삽입할 수도 있음
 
-
-
 #### admin 계정 생성
 
 ![](Django_2_assets/2022-09-01-17-09-58-image.png)
 
 ![](Django_2_assets/2022-09-01-17-10-06-image.png)
-
-
 
 #### admin site 로그인
 
@@ -1387,29 +1335,21 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
 
 ![](Django_2_assets/2022-09-01-17-10-52-image.png)
 
-
-
 #### admin에 모델 클래스 등록
 
 * 모델의 record를 보기 위해서는 admin.py에 등록 필요
 
 ![](Django_2_assets/2022-09-01-17-11-21-image.png)
 
-
-
 #### 등록된 모델 클래스 확인
 
 ![](Django_2_assets/2022-09-01-17-11-38-image.png)
-
-
 
 #### 데이터 CRUD 테스트
 
 * admin 페이지에서 데이터를 조작해보기
 
 ![](Django_2_assets/2022-09-01-17-12-04-image.png)
-
-
 
 ---
 
@@ -1434,3 +1374,62 @@ django-extension이 제공하는 더 강력한 shell_plus로 진행
   * 요청에 행동을 표현하는 HTTP request method
   
   * 요청에 대한 성공 여부 응답을 숫자로 표현하는 HTTP response status codes
+
+---
+
+## Django 모델 기본 구조
+
+---
+
+1. `[models.py](<http://models.py>)` 에 클래스를 정의한다.
+   
+   1. 이 때 클래스는 models.Model 을 상속 받아서 작성한다.
+   
+   2. 필요한 필드를 구성한다.
+   
+   3. 예시 코드
+      
+      ```python
+      class Post(models.Model):
+        # CharField / TextField 문자를 저장하기 위한 필드
+        # CharField : 글자 제한 / Textfield : 글자 제한이 없을 때 사용
+        title = models.CharField(max_length=255)  
+        content = models.TextField()
+      ```
+
+2. 작성 완료 되었으면 DB에 적용시켜야 하는데
+   
+   1. 가장 먼저 설계도를 만들어야 한다.
+      1. `python manage.py makemigrations`
+   2. 설계도 생성이 되었으면 이제 DB에 적용시켜줘야 한다.
+      1. `python manage.py migrate`
+
+3. CREATE (3가지 방법이 존재)
+   
+   1. 빈 인스턴스 생성하는 방법
+   2. 인스턴스 생성할 때 값을 주는 방법
+   3. Queryset API 의 create 사용하는 방법
+
+4. READ
+   
+   1. 전체 데이터를 읽어 오는 방법
+   2. 단일 데이터를 읽어 오는 방법
+      1. 어떤 글에 대한 정보를 가져오는지 글 정보를 variable routing으로 전달되어야 한다.
+
+5. UPDATE
+   
+   1. 데이터를 수정하는 방법
+      1. DB에서 수정할 데이터를 가져온다.
+      2. 수정한다
+      3. 저장한다
+   2. 데이터를 수정하기 위해 필요한 정보
+      1. 어떤 데이터를 수정하는지 데이터의 pk 값
+      2. 클릭했을 때 해당 글의 정보를 variable routing 으로 전달해야 한다.
+
+6. DELETE
+   
+   1. 데이터를 삭제하는 방법
+      1. 삭제할 데이터를 DB에서 가져온다
+      2. 삭제한다
+
+7. CRUD의 동작은 다음 페이지 혹은 동작이 어떤 것이 되어야 하는지 고민해 보면서 정리해주세요.
