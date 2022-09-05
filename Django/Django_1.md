@@ -231,8 +231,6 @@
 
 * 이 중에서 python을 이용해서 개발할 수 있는 프레임워크인 Django를 학습
 
-
-
 ---
 
 ## Django 프로젝트 시작하기 순서
@@ -292,11 +290,11 @@
             
             1. `TEMPLATES` 에 있는 `DIRS` 에 방금 생성한 폴더의 경로를 등록한다.
             
-            ![](C:\Users\Yuhyungwoo\Desktop\Untitled.png)
+            ![](C:\Users\Yuhyungwoo\SSAFY8\TIL\Django\Django_1_assets\Untitled.png)
             
             2. `BASE_DIR / ‘templates’`
             
-            ![](C:\Users\Yuhyungwoo\Desktop\Untitled%20(1).png)
+            ![](C:\Users\Yuhyungwoo\SSAFY8\TIL\Django\Django_1_assets\Untitled%20(1).png)
             
             - BASE_DIR : 전체 폴더 경로를 의미
          
@@ -323,44 +321,43 @@
             </body>
             </html>
             ```
-
       - 앱이름은 복수형으로 짓는다.
 
-2. `settings.py` 에 방금 생성한 application을 등록한다.
+9. `settings.py` 에 방금 생성한 application을 등록한다.
    
    1. `INSTALLED_APPS` 리스트 내부에 어플리케이션 이름을 등록해 준다.
    2. 이 때 `,` 빠지지 않도록 주의해준다.
    3. url 분리를 진행한다.
 
-3. 어플리케이션 폴더 내부에 `urls.py` 파일을 새롭게 생성한다.
+10. 어플리케이션 폴더 내부에 `urls.py` 파일을 새롭게 생성한다.
 
-4. `urls.py` 내부에 코드를 작성한다.
-   
-   1. path 함수를 import 한다
-   
-   2. urlpatterns 라는 빈 리스트를 만들어 준다.
-   
-   3. app_name 을 설정해준다.
-   - 최종 형태
-   
-   ```python
-   from django.urls import path
-   from . import views
-   
-   app_name = 'articles'
-   urlpatterns = [
-   
-   ]
-   ```
+11. `urls.py` 내부에 코드를 작성한다.
+    
+    1. path 함수를 import 한다
+    
+    2. urlpatterns 라는 빈 리스트를 만들어 준다.
+    
+    3. app_name 을 설정해준다.
+    - 최종 형태
+    
+    ```python
+    from django.urls import path
+    from . import views
+    
+    app_name = 'articles'
+    urlpatterns = [
+    
+    ]
+    ```
 
-5. 프로젝트 폴더에 있는 `urls.py` 에서 방금 생성한 `어플리케이션/urls.py` 를 등록해준다.
-   
-   1. include 함수를 import 한다.
-   
-   2. include 함수를 이용해서 urlpattern 에 등록한다.
-   - 참고
-   
-   ![](C:\Users\Yuhyungwoo\Desktop\Untitled%20(2).png)
+12. 프로젝트 폴더에 있는 `urls.py` 에서 방금 생성한 `어플리케이션/urls.py` 를 등록해준다.
+    
+    1. include 함수를 import 한다.
+    
+    2. include 함수를 이용해서 urlpattern 에 등록한다.
+    - 참고
+    
+    ![](C:\Users\Yuhyungwoo\SSAFY8\TIL\Django\Django_1_assets\Untitled%20(2).png)
 - 서비스 흐름도
 
 ---
