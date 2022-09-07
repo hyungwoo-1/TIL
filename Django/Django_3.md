@@ -82,19 +82,13 @@
 
 ![](Django_3_assets/2022-09-06-12-41-32-image.png)
 
-
-
 > #### 'new' view 함수 업데이트
 
 ![](Django_3_assets/2022-09-06-16-12-12-image.png)
 
-
-
 > #### 'new' 템플릿 업데이트
 
 ![](Django_3_assets/2022-09-06-16-12-38-image.png)
-
-
 
 > #### 업데이트 후 출력 확인
 
@@ -103,8 +97,6 @@
 * 각 태그의 속성 값들 또한 자동으로 설정 되어 있음
 
 ![](Django_3_assets/2022-09-06-16-14-22-image.png)
-
-
 
 > #### From rendering options
 
@@ -124,11 +116,9 @@
    * 각 필드가 테이블(`<tr>` 태그) 행으로 감싸져서 렌더링
 * 우리는 특별한 상황이 아니면 as_p()만 사용할 것
 
-
-
 > #### Django의 2가지 HTML input 요소 표현
 
-1.  Form fields
+1. Form fields
    
    * 입력에 대한 유효성 검사 로직을 처리
    
@@ -136,9 +126,7 @@
 
 ![](Django_3_assets/2022-09-06-16-17-55-image.png)
 
-
-
-2.  Widgets
+2. Widgets
    
    * 웹 페이지의 HTML input 요소 렌더링을 담당
      
@@ -147,8 +135,6 @@
    * Widgets은 반드시 form fields에 할당 됨
 
 ![](Django_3_assets/2022-09-06-16-18-39-image.png)
-
-
 
 ---
 
@@ -164,13 +150,9 @@
   
   * "웹 페이지에서 input element의 단순 raw한 렌더링만을 처리하는 것일 뿐"
 
-
-
 > #### Textarea 위젯 적용하기
 
 ![](Django_3_assets/2022-09-06-16-19-58-image.png)
-
-
 
 * 출력 결과 확인하기
 
@@ -180,21 +162,15 @@
 
 ![](Django_3_assets/2022-09-06-16-20-49-image.png)
 
-
-
 > #### Form fields와 widget 응용하기
 
 ![](Django_3_assets/2022-09-06-16-21-10-image.png)
-
-
 
 * 출력 결과를 확인하고 앞으로 어떻게 조합해서 사용할 수 있는지는 form field와 widgets 공식문서를 찾아보며 사용하도록 함
 
 ![](Django_3_assets/2022-09-06-16-21-41-image.png)
 
 ![](Django_3_assets/2022-09-06-16-21-48-image.png)
-
-
 
 ---
 
@@ -214,15 +190,11 @@
 
 * ModelForm을 사용하면 이러한 Form을 더 쉽게 작성할 수 있음
 
-
-
 > #### ModelForm Class
 
 * Model을 통해 Form Class를 만들 수 있는 helper class
 
 * ModelForm은 Form과 똑같은 방식으로 View 함수에서 사용
-
-
 
 > #### ModelForm 선언
 
@@ -236,8 +208,6 @@
 
 ![](Django_3_assets/2022-09-06-16-28-34-image.png)
 
-
-
 > #### ModelForm에서의 Meta Class
 
 * ModelForm의 정보를 작성하는 곳
@@ -250,15 +220,11 @@
 
 ![](Django_3_assets/2022-09-06-16-32-10-image.png)
 
-
-
 * fields 속성에 `'__all__'`를 사용하여 모델의 모든 필드를 포함할 수 있음
 
 * 또는 exclude 속성을 사용하여 모델에서 포함하지 않을 필드를 지정할 수 있음
 
 ![](Django_3_assets/2022-09-06-16-33-19-image.png)
-
-
 
 > #### [참고] Meta data
 
@@ -272,15 +238,11 @@
   
   * 사진 데이터에 대한 데이터(==사진의 Meta data)
 
-
-
 > #### [참고] 참조 값과 반환 값
 
 * 호출하지 않고 이름만 작성하는 이 방식은 어떤 의미일까
 
 ![](Django_3_assets/2022-09-06-16-34-45-image.png)
-
-
 
 > #### [참고] 참조 값과 반환 값
 
@@ -291,8 +253,6 @@
 * 첫번째 결과는 함수의 <mark>참조 값</mark>을 출력
 
 * 두번째 결과는 함수의 <mark>반환 값</mark>을 출력
-
-
 
 * 언제 참조 값을 사용할까?
   
@@ -310,8 +270,6 @@
 
 ![](Django_3_assets/2022-09-06-16-40-37-image.png)
 
-
-
 > #### 주의사항
 
 * Meta 클래스는 왜 여기에 작성할까..
@@ -328,8 +286,6 @@
   
   * https://github.com/django/django/blob/7bdd09d016f418719f2d0297f58bd81c5349101d/django/forms/models.py#286
 
-
-
 ---
 
 ## ModelForm with view functions
@@ -339,8 +295,6 @@
 > #### 개요
 
 * ModelForm으로 인한 view 함수의 구조 변화 알아보기
-
-
 
 > #### CREATE
 
@@ -356,15 +310,11 @@
 
 ![](Django_3_assets/2022-09-06-16-46-08-image.png)
 
-
-
 > #### "is_valid()" method
 
 * 유효성 검사를 실행하고, 데이터가 유효한지 여부를 boolean으로 반환
 
 * 데이터 유효성 검사를 보장하기 위한 많은 테스트에 대해 Django는 is_valid()를 제공하여 개발자의 편의를 도움
-
-
 
 > #### form 인스턴스의 errors 속성
 
@@ -372,19 +322,13 @@
 
 ![](Django_3_assets/2022-09-06-16-48-14-image.png)
 
-
-
 * title에 공백을 넣고 제출해보기
 
 ![](Django_3_assets/2022-09-06-16-48-30-image.png)
 
-
-
 * 이 같은 특징을 통해 다음과 같은 구조로 코드를 작성하면 유효성 검증을 실패 했을 때 사용자에게 실패 결과 메세지를 출력해줄 수 있음
 
 ![](Django_3_assets/2022-09-06-16-49-02-image.png)
-
-
 
 > #### The "save()" method
 
@@ -398,39 +342,27 @@
 
 ![](Django_3_assets/2022-09-06-16-50-37-image.png)
 
-
-
 > #### UPDATE
 
 * ModelForm의 인자 instance는 수정 대상이 되는 객체(기존 객체)를 지정
 
 ![](Django_3_assets/2022-09-06-16-51-10-image.png)
 
-
-
 * edit - view 수정
 
 ![](Django_3_assets/2022-09-06-16-52-24-image.png)
-
-
 
 * edit - template 수정
 
 ![](Django_3_assets/2022-09-06-16-55-58-image.png)
 
-
-
 * update - view 수정
 
 ![](Django_3_assets/2022-09-06-16-56-16-image.png)
 
-
-
 > #### [참고] ModelForm 키워드 인자 data와 instance 살펴보기
 
 ![](Django_3_assets/2022-09-06-16-57-14-image.png)
-
-
 
 > #### Form과 ModelForm
 
@@ -450,8 +382,6 @@
   
   * 데이터의 유효성 검사가 끝나면 데이터를 각각 어떤 레코드에 맵핑해야 할지 이미 알고 있기 때문에 곧바로 save() 호출이 가능
 
-
-
 ---
 
 ## Widgets 활용하기
@@ -462,13 +392,9 @@
 
 ![](Django_3_assets/2022-09-06-17-01-13-image.png)
 
-
-
 > #### Widgets 활용하기
 
 ![](Django_3_assets/2022-09-06-17-01-33-image.png)
-
-
 
 ----
 
@@ -494,8 +420,6 @@
 
 * 이 공통점과 차이점을 기반으로, 하나의 view 함수에서 method에 따라 로직이 분리되도록 변경
 
-
-
 > #### Create
 
 * new와 create view 함수를 합침
@@ -504,31 +428,21 @@
 
 ![](Django_3_assets/2022-09-06-17-06-20-image.png)
 
-
-
 * 이제는 불필요해진 new의 view 함수와 url path를 삭제
 
 ![](Django_3_assets/2022-09-06-17-06-43-image.png)
-
-
 
 * new.html -> create.html 이름변경 및 action 속성 값 수정
 
 ![](Django_3_assets/2022-09-06-17-07-11-image.png)
 
-
-
 * new.html -> create.html 이름변경으로 인한 템플릿 경로 수정
 
 ![](Django_3_assets/2022-09-06-17-10-03-image.png)
 
-
-
 * index 페이지에 있던 new 관련 링크 수정
 
 ![](Django_3_assets/2022-09-06-17-10-20-image.png)
-
-
 
 > #### context의 들여쓰기 위치
 
@@ -536,13 +450,9 @@
 
 ![](Django_3_assets/2022-09-06-17-11-20-image.png)
 
-
-
 * 반면 다음과 같이 작성하면 if form.is_valid(): 에서 false로 평가 받았을 때 에러 정보가 담긴 form 인스턴스가 context로 넘어 갈 수 있음
 
 ![](Django_3_assets/2022-09-06-17-12-07-image.png)
-
-
 
 > #### Update
 
@@ -550,31 +460,21 @@
 
 ![](Django_3_assets/2022-09-06-17-12-38-image.png)
 
-
-
 * new와 마찬가지로 불필요해진 edit의 view 함수와 url path를 삭제
 
 ![](Django_3_assets/2022-09-06-17-13-06-image.png)
-
-
 
 * edit.html -> update.html 이름변경으로 인한 관련 정보 수정
 
 ![](Django_3_assets/2022-09-06-17-13-30-image.png)
 
-
-
 * edit.html -> update.html 이름변경으로 인한 관련 정보 수정
 
 ![](Django_3_assets/2022-09-06-17-13-52-image.png)
 
-
-
 * POST 요청에 대해서만 삭제가 가능하도록 수정
 
 ![](Django_3_assets/2022-09-06-17-14-07-image.png)
-
-
 
 ---
 
@@ -585,8 +485,6 @@
 > #### 개요
 
 * View decorators 를 사용해 view 함수를 단단하게 만들기
-
-
 
 > #### 데코레이터 (Decorator)
 
@@ -599,8 +497,6 @@
 ![](Django_3_assets/2022-09-06-17-21-37-image.png)
 
 ![](Django_3_assets/2022-09-06-17-21-41-image.png)
-
-
 
 ---
 
@@ -618,13 +514,9 @@
 
 ![](Django_3_assets/2022-09-06-17-22-52-image.png)
 
-
-
 > #### [참고] 405 Method Not Allowed
 
 * 요청 방법이 서버에게 전달 되었으나 사용 불가능한 상태
-
-
 
 > #### require_http_methods()
 
@@ -632,29 +524,21 @@
 
 ![](Django_3_assets/2022-09-06-17-23-58-image.png)
 
-
-
 > #### require_POST()
 
 * View 함수가 POST 요청 method만 허용하도록 하는 데코레이터
 
 ![](Django_3_assets/2022-09-06-17-24-29-image.png)
 
-
-
 * url로 delete 시도 후 서버 로그에서 405 http status code 확인 해보기
 
 ![](Django_3_assets/2022-09-06-17-24-57-image.png)
-
-
 
 > #### require_safe()
 
 * require_GET이 있지만 Django에서는 require_safe를 사용하는 것을 권장
 
 ![](Django_3_assets/2022-09-06-17-26-02-image.png)
-
-
 
 ---
 
