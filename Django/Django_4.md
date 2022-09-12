@@ -347,8 +347,6 @@
    
    * Expires 속성에 지정된 날짜 혹은 Max-Age 속성에 지정된 기간이 지나면 삭제됨
 
-
-
 > ### Session in Django
 
 * Django는 database-backed sessions 저장 방식을 기본 값으로 사용
@@ -361,8 +359,6 @@
 
 * Django는 우리가 session 메커니즘(복잡한 동작원리)에 대부분을 생각하지 않게끔 많은 도움을 줌
 
-
-
 ---
 
 ## Authentication in Web requests
@@ -372,8 +368,6 @@
 > ### 개요
 
 * Django가 제공하는 인증 관련 built-in forms 익히기
-
-
 
 ---
 
@@ -385,8 +379,6 @@
 
 * 로그인은 Session을 Create하는 과정
 
-
-
 > ### AuthenticationForm
 
 * 로그인을 위한 built-in form
@@ -397,8 +389,6 @@
 
 * request를 첫번째 인자로 취함
 
-
-
 > ### 로그인 페이지 작성
 
 ![](Django_4_assets/2022-09-12-21-29-21-image.png)
@@ -406,8 +396,6 @@
 ![](Django_4_assets/2022-09-12-21-29-28-image.png)
 
 ![](Django_4_assets/2022-09-12-21-29-33-image.png)
-
-
 
 > ### login()
 
@@ -419,8 +407,6 @@
 
 * HttpRequest 객체와 User 객체가 필요
 
-
-
 > ### 로그인 로직 작성
 
 * 로그인 페이지 작성
@@ -429,45 +415,32 @@
 
 ![](Django_4_assets/2022-09-12-21-31-28-image.png)
 
-
-
 > ### get_user()
 
 * AuthenticationForm의 인스턴스 메서드
 
 * 유효성 검사를 통과했을 경우 로그인 한 사용자 객체를 반환
 
-
-
 > ### 세션 데이터 확인하기
 
 * 로그인 후 개발자 도구와 DB에서 django로부터 발급받은 세션 확인
   
   (로그인은 관리자 계정을 만든 후 진행)
-
-
-
-1.  django_session 테이블에서 확인
+1. django_session 테이블에서 확인
 
 ![](Django_4_assets/2022-09-12-21-44-14-image.png)
 
-
-
-2.  브라우저에서 확인
+2. 브라우저에서 확인
    
    개발자도구 - Application - Cookies
 
 ![](Django_4_assets/2022-09-12-21-44-44-image.png)
-
-
 
 > ### 로그인 링크 작성
 
 * 실습 편의를 위해 base 템플릿에 로그인 페이지로 이동할 수 있는 하이퍼 링크 작성
 
 ![](Django_4_assets/2022-09-12-21-45-28-image.png)
-
-
 
 ---
 
@@ -483,23 +456,17 @@
   
   * 회원 가입, 회원 탈퇴, 회원정보 수정, 비밀번호 변경
 
-
-
 > ### 현재 로그인 되어있는 유저 정보 출력하기
 
 * 템플릿에서 인증 관련 데이터를 출력하는 방법
 
 ![](Django_4_assets/2022-09-12-21-48-36-image.png)
 
-
-
 * 어떻게 base 템플릿에서 context 데이터 없이 user 변수를 사용할 수 있는 걸까?
   
   => settings.py의 context processors 설정 값 때문
 
 ![](Django_4_assets/2022-09-12-21-49-27-image.png)
-
-
 
 > ### context processors
 
@@ -511,15 +478,11 @@
 
 ![](Django_4_assets/2022-09-12-21-54-49-image.png)
 
-
-
 * 현재 user 변수를 담당하는 프로세서는 django.contrib.auth.context_processors.auth
 
 * 이외에 더 많은 Built-in template context processors들은 공식문서를 참고
 
 ![](Django_4_assets/2022-09-12-21-56-20-image.png)
-
-
 
 > ### django.contrib.auth.context_processors.auth
 
@@ -533,8 +496,6 @@
 
 ![](Django_4_assets/2022-09-12-21-58-06-image.png)
 
-
-
 ---
 
 ## Logout
@@ -544,8 +505,6 @@
 > ### 개요
 
 * 로그아웃은 Session을 Delete하는 과정
-
-
 
 > ### logout()
 
@@ -557,13 +516,11 @@
 
 * 다음 2가지 일을 처리한다.
   
-  1.  현재 요청에 대한 session data를 DB에서 삭제
+  1. 현재 요청에 대한 session data를 DB에서 삭제
   
-  2.  클라이언트 쿠키에서도 sessionid를 삭제
+  2. 클라이언트 쿠키에서도 sessionid를 삭제
      
      * 이는 다른 사람이 동일한 웹 브라우저를 사용하여 로그인하고, 이전 사용자의 세션 데이터에 액세스하는 것을 방지하기 위함
-
-
 
 > ### 로그아웃 로직 작성하기
 
@@ -573,13 +530,9 @@
 
 ![](Django_4_assets/2022-09-12-22-01-30-image.png)
 
-
-
 > ### 로그아웃 출력 확인 및 테스트
 
 ![](Django_4_assets/2022-09-12-22-02-09-image.png)
-
-
 
 ---
 
@@ -591,21 +544,17 @@
 
 * 회원가입은 User를 Create하는 것이며 UserCreationForm built-in form을 사용
 
-
-
 > ### UserCreationForm
 
 * 주어진 username과 password로 권한이 없는 새 user를 생성하는 ModelForm
 
 * 3개의 필드를 가짐
   
-  1.  username (from the user model)
+  1. username (from the user model)
   
-  2.  password 1
+  2. password 1
   
-  3.  password 2
-
-
+  3. password 2
 
 > ### 회원 가입 페이지 작성
 
@@ -615,19 +564,13 @@
 
 ![](Django_4_assets/2022-09-12-22-06-03-image.png)
 
-
-
 > ### 회원가입 링크 작성 후 페이지 확인
 
 ![](Django_4_assets/2022-09-12-22-06-23-image.png)
 
-
-
 > ### 회원가입 로직 작성
 
 ![](Django_4_assets/2022-09-12-22-06-37-image.png)
-
-
 
 > ### 회원가입 진행 후 에러 페이지를 확인
 
@@ -636,8 +579,6 @@
 ![](Django_4_assets/2022-09-12-22-07-27-image.png)
 
 ![](Django_4_assets/2022-09-12-22-07-32-image.png)
-
-
 
 ---
 
@@ -651,38 +592,30 @@
 
 * Custom user로 인한 Built-in auth forms 변경
 
-
-
 > ### AbstractBaseUser의 모든 subclass와 호환되는 forms
 
 * 아래 Form 클래스는 User 모델을 대체하더라도 커스텀 하지 않아도 사용가능
   
-  1.  AuthenticationForm
+  1. AuthenticationForm
   
-  2.  SetPasswordForm
+  2. SetPasswordForm
   
-  3.  PasswordChangeForm
+  3. PasswordChangeForm
   
-  4.  AdminPasswordChangeForm
+  4. AdminPasswordChangeForm
 
 * 기존 User 모델을 참조하는 Form이 아니기 때문
 
-
-
 > ### 커스텀 유저 모델을 사용하려면 다시 작성하거나 확장해야 하는 forms
 
-1.  UserCreationForm
+1. UserCreationForm
 
-2.  UserChangeForm
+2. UserChangeForm
 * 두 form 모두 class Meta: model = User 가 등록된 form이기 때문에 반드시 커스텀(확장)해야 함
-
-
 
 > ### UserCreationForm() 커스텀 하기
 
 ![](Django_4_assets/2022-09-12-22-15-26-image.png)
-
-
 
 > ### get_user_model()
 
@@ -698,33 +631,23 @@
 
 * User  model 참조에 대한 자세한 내용은 추후 모델 관계 수업에서 다룰 예정
 
-
-
 > ### CustomUserCreationForm() 으로 대체하기
 
 ![](Django_4_assets/2022-09-12-22-20-02-image.png)
-
-
 
 > ### 회원가입 진행 후 테이블 확인
 
 ![](Django_4_assets/2022-09-12-22-20-29-image.png)
 
-
-
 > ### 회원가입 후 곧바로 로그인 진행
 
 ![](Django_4_assets/2022-09-12-22-20-57-image.png)
-
-
 
 > ### [참고] UserCreationForm의 save 메서드
 
 * user를 반환하는 것을 확인
 
 ![](Django_4_assets/2022-09-12-22-25-49-image.png)
-
-
 
 ---
 
@@ -736,8 +659,6 @@
 
 * 회원 탈퇴하는 것은 DB에서 유저를 Delete하는 것과 같음
 
-
-
 > ### 회원 탈퇴 로직 작성
 
 ![](Django_4_assets/2022-09-12-22-26-34-image.png)
@@ -746,8 +667,6 @@
 
 ![](Django_4_assets/2022-09-12-22-26-46-image.png)
 
-
-
 > ### [참고] 탈퇴 하면서 해당 유저의 세션 정보도 함께 지우고 싶을 경우
 
 * "탈퇴(1) 후 로그아웃(2)"의 순서가 바뀌면 안됨
@@ -755,8 +674,6 @@
   * 먼저 로그아웃 해버리면 해당 요청 객체 정보가 없어지기 때문에 탈퇴에 필요한 정보 또한 없어지기 때문
 
 ![](Django_4_assets/2022-09-12-22-27-43-image.png)
-
-
 
 ---
 
@@ -768,8 +685,6 @@
 
 * 회원정보 수정은 User를 Update 하는 것이며 UserChangeForm built-in form을 사용
 
-
-
 > ### UserChangeForm
 
 * 사용자의 정보 및 권한을 변경하기 위해 admin 인터페이스에서 사용되는 ModelForm
@@ -777,8 +692,6 @@
 * UserChangeForm 또한 ModelForm이기 때문에 instance 인자로 기존 user 데이터 정보를 받는 구조 또한 동일함
 
 * 이미 이전에 CustomUserChangeForm으로 확장했기 때문에 CustomUserChangeForm을 사용하기 
-
-
 
 > ### 회원정보 수정 페이지 작성
 
@@ -788,19 +701,13 @@
 
 ![](Django_4_assets/2022-09-12-22-31-06-image.png)
 
-
-
 > ### 회원정보 수정 페이지 링크 작성
 
 ![](Django_4_assets/2022-09-12-22-31-22-image.png)
 
-
-
 > ### 회원정보 수정 페이지 확인
 
 ![](Django_4_assets/2022-09-12-22-31-37-image.png)
-
-
 
 > ### UserChangeForm 사용 시 문제점
 
@@ -812,21 +719,15 @@
   
   CustomUserChangeForm에서 접근 가능한 필드를 조정해야 함
 
-
-
 > ### CustomUserChangeForm fields 재정의
 
 * User 모델의 fields명은 어떻게 알 수 있을까?
 
 ![](Django_4_assets/2022-09-12-22-33-39-image.png)
 
-
-
 > ### User model 상속 구조 살펴보기
 
 ![](Django_4_assets/2022-09-12-22-34-26-image.png)
-
-
 
 > ### CustomUserChangeForm fields 재정의
 
@@ -836,15 +737,11 @@
 
 ![](Django_4_assets/2022-09-12-22-35-01-image.png)
 
-
-
 > ### 회원정보 수정 로직 작성
 
 * 작성 후 실제 회원정보가 수정되었는지 확인
 
 ![](Django_4_assets/2022-09-12-22-35-29-image.png)
-
-
 
 ---
 
@@ -860,15 +757,11 @@
 
 * 이전 비밀번호를 입력하지 않고 비밀번호를 설정할 수 있는 SetPasswordForm을 상속받는 서브 클래스
 
-
-
 * 회원정보 수정 페이지에서 비밀번호 변경 form 주소를 확인해보기
   
   * /accounts/password/
 
 ![](Django_4_assets/2022-09-12-22-37-55-image.png)
-
-
 
 > ### 비밀번호 변경 페이지 작성
 
@@ -878,15 +771,11 @@
 
 ![](Django_4_assets/2022-09-12-22-40-58-image.png)
 
-
-
 > ### [참고] SetPasswordForm 살펴보기
 
 * PasswordChangeForm은 SetPasswordForm의 하위 클래스이기 때문에 SetPasswordForm을 확인
 
 ![](Django_4_assets/2022-09-12-22-41-46-image.png)
-
-
 
 > ### 비밀번호 변경 로직 작성
 
@@ -896,15 +785,11 @@
 
 ![](Django_4_assets/2022-09-12-22-42-22-image.png)
 
-
-
 > ### 암호 변경 시 세션 무효화 방지하기
 
 * 비밀번호가 변경되면 기존 세션과의 회원 인증 정보가 일치하지 않게 되어 버려 로그인 상태가 유지되지 못함
 
 * 비밀번호는 잘 변경되었으나 비밀번호가 변경 되면서 기존 세션과의 회원 인증 정보가 일치하지 않기 때문
-
-
 
 > ### update_session_auth_hash()
 
@@ -913,3 +798,206 @@
 * 현재 요청(current request)과 새 session data가 파생 될 업데이트 된 사용자 객체를 가져오고, session data를 적절하게 업데이트해줌
 
 * 암호가 변경되어도 로그아웃 되지 않도록 새로운 password의 session data로 session을 업데이트
+
+
+
+> ### update_session_auth_hash()작성
+
+![](Django_4_assets/2022-09-12-22-57-23-image.png)
+
+
+
+---
+
+## Limiting access to logged-in users
+
+---
+
+> ### 개요
+
+* 로그인 사용자에 대한 접근 제한하기
+
+* 로그인 사용자에 대해 접근을 제한하는 2가지 방법
+1.  The raw way
+   
+   * is_authenticated attribute
+   
+   * The login_required decorator
+
+
+
+> ### is_authenticated
+
+* User model의 속성 중 하나
+
+* 사용자가 인증 되었는지 여부를 알 수 있는 방법
+
+* 모든 User 인스턴스에 대해 항상 True인 읽기 전용 속성
+  
+  * AnonymousUser에 대해서는 항상 False
+
+* 일반적으로 request.user에서 이 속성을 사용 (request.user.is_authenticated)
+
+* 권한과는 관련이 없으며, 사용자가 활성화 상태이거나 유효산 세션을 가지고 있는지도 확인하지 않음
+
+
+
+> ### [참고] is_authenticated 코드 살펴보기
+
+![](Django_4_assets/2022-09-12-23-29-52-image.png)
+
+
+
+> ### is_authenticated 적용하기
+
+* 로그인과 비로그인 상태에서 출력되는 링크를 다르게 설정하기
+
+![](Django_4_assets/2022-09-12-23-30-58-image.png)
+
+
+
+* 인증된 사용자만 게시글 작성 링크를 볼 수 있도록 처리하기
+
+* 하지만 아직 비 로그인 상태로도 URL을 직접 입력하면 게시글 작성 페이지로 갈 수 있음
+
+![](Django_4_assets/2022-09-12-23-32-17-image.png)
+
+
+
+* 인증된 사용자라면 로그인 로직을 수행할 수 없도록 처리
+
+![](Django_4_assets/2022-09-12-23-32-39-image.png)
+
+
+
+> ### login_required
+
+* login_required decorator
+
+* 사용자가 로그인 되어 있으면 정상적으로 view 함수를 실행
+
+* 로그인 하지 않은 사용자의 경우 settings.py의 LOGIN_URL 문자열 주소로 redirect
+  
+  * [참고] LOGIN_URL의 기본 값은 / accounts/login/
+  
+  * 두번째 app 이름을 accounts 로 했던 이유 중 하나
+
+
+
+* 로그인 상태에서만 글을 작성/수정/삭제 할 수 있도록 변경
+
+![](Django_4_assets/2022-09-12-23-39-42-image.png)
+
+
+
+> ### login_required 적용 확인하기
+
+* /articles/create/ 로 강제 접속 시도 해보기
+
+* 로그인 페이지로 리다이렉트 후 /accounts/login/?next=/articles/create/
+  
+  url확인하기
+
+* 인증 성공 시 사용자가 redirect 되어야하는 경로는 "next"라는 쿼리 문자열 매개 변수에 저장됨
+  
+  * 예시 ) /accounts/login/?next=/articles/create/
+
+
+
+> ### "next" query string parameter
+
+* 로그인이 정상적으로 진행되면 이전에 요청했던 주소로 redirect 하기 위해 Django가 제공해주는 쿼리 스트링 파라미터
+
+* 해당 값을 처리할지 말지는 자유이며 별도로 처리 해주지 않으면 view에 설정한 redirect 경로로 이동하게 됨
+
+
+
+> ### "next" query string parameter 대응
+
+![](Django_4_assets/2022-09-12-23-43-08-image.png)
+
+
+
+> ### "next" query string parameter 주의사항
+
+* 만약 login 템플릿에서 form action이 작성되어 있다면 동작하지 않음
+
+* 해당 action 주소 next 파라미터가 작성 되어있는 현재 url이 아닌 /accounts/login/으로 요청을 보내기 때문
+
+![](Django_4_assets/2022-09-12-23-44-45-image.png)
+
+
+
+> ### 두 데코레이터로 인해 발생하는 구조적 문제
+
+1.  먼저 비로그인 상태로 detail 페이지에서 게시글 삭제 시도
+
+2.  delete view 함수의 @login_required로 인해 로그인 페이지로 리다이렉트
+   
+   * http://127.0.0.1:8000/accounts/login/?next=/articles/1/delete/
+
+3.  redirect로 이동한 로그인 페이지에서 로그인 진행
+
+4.  delete view 함수의 @require_POST로 인해 405 상태 코드를 받게 됨
+   
+   * 405(Method Not Allowed) status code 확인
+
+
+
+* 로그인 성공 이후 GET method로 next 파라미터 주소에 리다이렉트 되기 때문
+
+![](Django_4_assets/2022-09-12-23-47-28-image.png)
+
+![](Django_4_assets/2022-09-12-23-47-34-image.png)
+
+
+
+* 두 가지 문제가 발생한 것
+  
+  1.  redirect 과정에서 POST 요청 데이터의 손실
+  
+  2.  redirect로 인한 요청은 GET 요청 메서드로만 요청됨
+
+* 해결방안
+  
+  * `@login_required`는 GET request method를 처리할 수 있는 View 함수  에서만 사용해야함
+
+
+
+> ### 두 데코레이터로 인해 발생하는 구조적 문제 해결
+
+* POST method만 허용하는 delete 같은 함수는 내부에서는 is_authenticated 속성 값을 사용해서 처리
+
+![](Django_4_assets/2022-09-12-23-49-55-image.png)
+
+
+
+> ### accounts view 함수에 모든 데코레이터 및 속성 값 적용해보기
+
+![](Django_4_assets/2022-09-12-23-51-49-image.png)
+
+
+
+---
+
+## 마무리
+
+---
+
+> ### 마무리
+
+* The Django authentication system
+  
+  * User 모델 대체하기
+
+* HTTP Cookies
+  
+  * 상태가 있는 세션 구성
+
+* Authentication in Web requests
+  
+  * Auth built-in form 사용하기
+
+* Authentication with User
+  
+  * User Object와 User CRUD
