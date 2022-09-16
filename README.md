@@ -35,6 +35,7 @@
 4. Algorithm_4
 5. Algorithm_5
 6. Algorithm_6
+7. Algorithm_7
 
 ---
 
@@ -45,3 +46,5 @@
 2. Django_2
 
 3. Django_3
+
+4. Django_4
