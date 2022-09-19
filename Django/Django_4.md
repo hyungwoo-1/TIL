@@ -799,13 +799,9 @@
 
 * 암호가 변경되어도 로그아웃 되지 않도록 새로운 password의 session data로 session을 업데이트
 
-
-
 > ### update_session_auth_hash()작성
 
 ![](Django_4_assets/2022-09-12-22-57-23-image.png)
-
-
 
 ---
 
@@ -818,13 +814,11 @@
 * 로그인 사용자에 대한 접근 제한하기
 
 * 로그인 사용자에 대해 접근을 제한하는 2가지 방법
-1.  The raw way
+1. The raw way
    
    * is_authenticated attribute
    
    * The login_required decorator
-
-
 
 > ### is_authenticated
 
@@ -840,13 +834,9 @@
 
 * 권한과는 관련이 없으며, 사용자가 활성화 상태이거나 유효산 세션을 가지고 있는지도 확인하지 않음
 
-
-
 > ### [참고] is_authenticated 코드 살펴보기
 
 ![](Django_4_assets/2022-09-12-23-29-52-image.png)
-
-
 
 > ### is_authenticated 적용하기
 
@@ -854,21 +844,15 @@
 
 ![](Django_4_assets/2022-09-12-23-30-58-image.png)
 
-
-
 * 인증된 사용자만 게시글 작성 링크를 볼 수 있도록 처리하기
 
 * 하지만 아직 비 로그인 상태로도 URL을 직접 입력하면 게시글 작성 페이지로 갈 수 있음
 
 ![](Django_4_assets/2022-09-12-23-32-17-image.png)
 
-
-
 * 인증된 사용자라면 로그인 로직을 수행할 수 없도록 처리
 
 ![](Django_4_assets/2022-09-12-23-32-39-image.png)
-
-
 
 > ### login_required
 
@@ -882,13 +866,9 @@
   
   * 두번째 app 이름을 accounts 로 했던 이유 중 하나
 
-
-
 * 로그인 상태에서만 글을 작성/수정/삭제 할 수 있도록 변경
 
 ![](Django_4_assets/2022-09-12-23-39-42-image.png)
-
-
 
 > ### login_required 적용 확인하기
 
@@ -902,21 +882,15 @@
   
   * 예시 ) /accounts/login/?next=/articles/create/
 
-
-
 > ### "next" query string parameter
 
 * 로그인이 정상적으로 진행되면 이전에 요청했던 주소로 redirect 하기 위해 Django가 제공해주는 쿼리 스트링 파라미터
 
 * 해당 값을 처리할지 말지는 자유이며 별도로 처리 해주지 않으면 view에 설정한 redirect 경로로 이동하게 됨
 
-
-
 > ### "next" query string parameter 대응
 
 ![](Django_4_assets/2022-09-12-23-43-08-image.png)
-
-
 
 > ### "next" query string parameter 주의사항
 
@@ -926,43 +900,34 @@
 
 ![](Django_4_assets/2022-09-12-23-44-45-image.png)
 
-
-
 > ### 두 데코레이터로 인해 발생하는 구조적 문제
 
-1.  먼저 비로그인 상태로 detail 페이지에서 게시글 삭제 시도
+1. 먼저 비로그인 상태로 detail 페이지에서 게시글 삭제 시도
 
-2.  delete view 함수의 @login_required로 인해 로그인 페이지로 리다이렉트
+2. delete view 함수의 @login_required로 인해 로그인 페이지로 리다이렉트
    
    * http://127.0.0.1:8000/accounts/login/?next=/articles/1/delete/
 
-3.  redirect로 이동한 로그인 페이지에서 로그인 진행
+3. redirect로 이동한 로그인 페이지에서 로그인 진행
 
-4.  delete view 함수의 @require_POST로 인해 405 상태 코드를 받게 됨
+4. delete view 함수의 @require_POST로 인해 405 상태 코드를 받게 됨
    
    * 405(Method Not Allowed) status code 확인
-
-
-
 * 로그인 성공 이후 GET method로 next 파라미터 주소에 리다이렉트 되기 때문
 
 ![](Django_4_assets/2022-09-12-23-47-28-image.png)
 
 ![](Django_4_assets/2022-09-12-23-47-34-image.png)
 
-
-
 * 두 가지 문제가 발생한 것
   
-  1.  redirect 과정에서 POST 요청 데이터의 손실
+  1. redirect 과정에서 POST 요청 데이터의 손실
   
-  2.  redirect로 인한 요청은 GET 요청 메서드로만 요청됨
+  2. redirect로 인한 요청은 GET 요청 메서드로만 요청됨
 
 * 해결방안
   
   * `@login_required`는 GET request method를 처리할 수 있는 View 함수  에서만 사용해야함
-
-
 
 > ### 두 데코레이터로 인해 발생하는 구조적 문제 해결
 
@@ -970,13 +935,9 @@
 
 ![](Django_4_assets/2022-09-12-23-49-55-image.png)
 
-
-
 > ### accounts view 함수에 모든 데코레이터 및 속성 값 적용해보기
 
 ![](Django_4_assets/2022-09-12-23-51-49-image.png)
-
-
 
 ---
 
