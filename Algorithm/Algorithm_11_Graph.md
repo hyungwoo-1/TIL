@@ -300,8 +300,6 @@
 
 ![](Algorithm_11_Graph_assets/2022-09-28-16-34-46-image.png)
 
-
-
 * 공백상태 및 포화상태 검사 : isEmpty(), isFull()
   
   * 공백상태 : front = rear
@@ -309,8 +307,6 @@
   * 포화상태 : rear = n -1 (n : 배열의 크기, n - 1 : 배열의 마지막 인덱스)
 
 ![](Algorithm_11_Graph_assets/2022-10-03-16-29-39-image.png)
-
-
 
 ---
 
@@ -324,21 +320,15 @@
 
 ![](Algorithm_11_Graph_assets/2022-10-03-16-41-14-image.png)
 
-
-
 > ### BFS 알고리즘
 
 * 입력 파라미터 : 그래프 G와 탐색 시작점 v
 
 ![](Algorithm_11_Graph_assets/2022-10-03-16-54-46-image.png)
 
-
-
 > ### BFS 예
 
 ![](Algorithm_11_Graph_assets/2022-10-03-16-55-00-image.png)
-
-
 
 ---
 
@@ -349,8 +339,6 @@
 * 서로소 또는 상호배타 집합들은 서로 중복 포함된 원소가 없는 집합들이다. 다시 말해 교집합이 없다.
 
 * 집합에 속한 하나의 특정 멤버를 통해 각집합들을 구분한다. 이를 대표자라 한다.
-
-
 
 * 상호배타 집합을 표현하는 방법
   
@@ -366,13 +354,9 @@
   
   * Union (x, y)
 
-
-
 * 상호 배타 집합 예
 
 ![](Algorithm_11_Graph_assets/2022-10-03-16-59-56-image.png)
-
-
 
 > ### 상호 배타 집합 표현 - 연결리스트
 
@@ -384,13 +368,9 @@
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-02-03-image.png)
 
-
-
 * 연결리스트 연산 예
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-03-56-image.png)
-
-
 
 > ### 상호 배타 집합 표현 - 트리
 
@@ -400,21 +380,15 @@
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-04-27-image.png)
 
-
-
 * 연산 예
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-04-37-image.png)
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-04-44-image.png)
 
-
-
 * 상호 배타 집합을 표현한 트리의 배열을 이용한 저장된 모습
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-05-01-image.png)
-
-
 
 > ### 상호배타 집합에 대한 연산
 
@@ -423,8 +397,6 @@
 ![](Algorithm_11_Graph_assets/2022-10-03-17-07-26-image.png)
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-07-36-image.png)
-
-
 
 * 연산의 효율을 높이는 방법
   
@@ -438,33 +410,23 @@
     
     * Find-Set을 행하는 과정에서 만나는 모든 노드들이 직접 root를 가리키도록 포인터를 바꾸어 준다
 
-
-
 * 랭크를 이용한 Union의 예
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-09-08-image.png)
-
-
 
 * 랭크를 이용한 Union에서 랭크가 증가하는 예
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-09-27-image.png)
 
-
-
 * Path Compression의 예
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-09-44-image.png)
-
-
 
 * Make-Set() 연산
   
   * Make-Set(x) : 유일한 멤버 x를 포함하는 새로운 집합을 생성하는 연산
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-10-25-image.png)
-
-
 
 * Find-Set 연산
   
@@ -473,8 +435,6 @@
 ![](Algorithm_11_Graph_assets/2022-10-03-17-10-54-image.png)
 
 * Find-set 연산은 특정 노드에서 루트까지의 경로를 찾아 가면서 노드의 부모 정보를 갱신한다
-
-
 
 * Union 연산
   
@@ -488,8 +448,6 @@
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-07-02-image.png)
 
-
-
 ---
 
 ## MST
@@ -498,9 +456,9 @@
 
 * 그래프에서 최소 비용 문제
   
-  * 1.  모든 정점을 연결하는 간선들의 가중치의 합이 최소가 되는 트리
+  * 1. 모든 정점을 연결하는 간선들의 가중치의 합이 최소가 되는 트리
     
-    2.  두 정점 사이의 최소 비용의 경로 찾기
+    2. 두 정점 사이의 최소 비용의 경로 찾기
 
 * 신장 트리
   
@@ -510,15 +468,11 @@
   
   * 무방향 가중치 그래프에서 신장 트리를 구성하는 간선들의 가중치의 합이 최소인 신장 트리
 
-
-
 > ### MST 표현
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-19-21-image.png)
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-19-30-image.png)
-
-
 
 > ### Prim 알고리즘
 
@@ -530,15 +484,11 @@
   
   3. 모든 정점이 선택될 때 까지 1, 2 과정을 반복
 
-
-
 * 서로소인 2개의 집합 정보를 유지
   
   * 트리 정점들 - MST를 만들기 위해 선택된 정점들
   
   * 비트리 정점들 - 선택 되지 않은 정점들
-
-
 
 * 알고리즘 적용 예
 
@@ -548,13 +498,9 @@
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-21-33-image.png)
 
-
-
 * 알고리즘
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-21-47-image.png)
-
-
 
 > ### KRUSKAL 알고리즘
 
@@ -568,8 +514,6 @@
   
   3. n-1 개의 간선이 선택될 때 까지 2를 반복
 
-
-
 * 알고리즘 적용 예
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-23-11-image.png)
@@ -578,13 +522,9 @@
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-23-23-image.png)
 
-
-
 * 알고리즘
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-23-34-image.png)
-
-
 
 ---
 
@@ -612,8 +552,6 @@
   
   * 플로이드 워샬 알고리즘
 
-
-
 > ### Dijkstra 알고리즘
 
 * 시작 정점에서 거리가 최소인 정점을 선택해 나가면서 최단 경로를 구하는 방식이다.
@@ -624,11 +562,7 @@
 
 * 탐욕 기법을 사용한 알고리즘으로 MST의 프림 알고리즘과 유사하다
 
-
-
 ![](Algorithm_11_Graph_assets/2022-10-03-17-26-21-image.png)
-
-
 
 * 알고리즘
 
@@ -651,5 +585,3 @@
 ![](Algorithm_11_Graph_assets/2022-10-03-17-27-19-image.png)
 
 ![](Algorithm_11_Graph_assets/2022-10-03-17-27-25-image.png)
-
-
